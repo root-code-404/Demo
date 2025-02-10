@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swargam Pool Resort Varkala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add this in your <head> section to include Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    
+        <style>
+        /* Custom Styles */
+        .carousel-card {
+            position: relative;
+            width: 270px;
+            height: 350px;
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.7s ease-in-out;
+        }
+
+        .carousel-card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .details-box {
+            position: relative;
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Flexbox layout for small screens */
+        @media (max-width: 768px) {
+            .carousel-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .details-box {
+                width: 90%;
+                margin-top: 20px;
+                top: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-card {
+                width: 220px;
+                height: 270px;
+            }
+
+            .details-box {
+                width: 90%;
+                margin-top: 20px;
+                top: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 nav h-28">
+        <div class="container mx-auto flex justify-between items-center p-4 flex-col md:flex-row">
+            <!-- Logo -->
+            
+    
+            <!-- Contact Links (Visible on larger screens) -->
+            <div class="hidden md:flex space-x-3">
+                <a href="/" class="text-xl font-bold flex  mb-4 md:mb-0 mr-8 items-center">
+                    <img src="image/logo.png" class="w-20 h-30 mr-4 " alt="Swargam Pool Resort Logo" />
+                </a>
+                 
+            </div>
+
+            
+    
+            <!-- Hamburger Button for Mobile -->
+            <button id="menu-btn" class="md:hidden text-2xl">
+                <i class="bi bi-list"></i> <!-- Bootstrap hamburger icon -->
+            </button>
+            <ul id="nav-links" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-x-6 md:space-y-0">
+                <li>
+                    <a href="tel:+917561807765" class="text-gray-700 hover:text-blue-500 flex justify-center items-center">
+                        <i class="bi bi-telephone-fill mr-2"></i> +91 7561807765
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:swargamresort@gmail.com" class="text-gray-700 hover:text-blue-500 flex justify-center items-center">
+                        <i class="bi bi-envelope-fill mr-2"></i> swargamresort@gmail.com
+                    </a>
+                </li>
+            </ul>
+            <!-- Navbar Links -->
+            <ul id="nav-links" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-x-6 md:space-y-0">
+                <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="#room" class="hover:text-blue-500">Rooms</a></li>
+                <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute top-16 left-0 w-full text-left p-4">
+            <ul class="flex flex-col space-y-4">
+                <li>
+                    <a href="/" class="text-xl font-bold flex  mb-2">
+                        <img src="image/logo.png" class="w-20 h-30 mr-4 " alt="Swargam Pool Resort Logo" />
+                    </a>
+                </li>
+                <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="#room" class="hover:text-blue-500">Rooms</a></li>
+                <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+                <li>
+                    <a href="tel:+917561807765" class="text-gray-700 hover:text-blue-500 flex  ">
+                        <i class="bi bi-telephone-fill mr-2"></i> +91 7561807765
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:swargamresort@gmail.com"
+                        class="text-gray-700 hover:text-blue-500 flex  ">
+                        <i class="bi bi-envelope-fill mr-2"></i> swargamresort@gmail.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+
+ 
+    <!-- Carousel Section -->
+
+    <section id="home" class="relative ">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                <img src="image/home1.jpg" class="d-block w-full transform hover:scale-105 transition duration-300" alt="Resort Image">
+
+                </div>
+                <div class="carousel-item">
+                <img src="image/home2.jpg" class="d-block w-full transform hover:scale-105 transition duration-300" alt="Resort Image">
+
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-center text-white mt-12 ">
+            <h1 class="text-2xl sm:text-2xl md:text-2xl lg:text-4xl font-bold">Swargam Pool Resort Varkala</h1>
+            <p class="lg:text-lg xl:text-lg md:text-md sm:text-sm">Experience luxury and tranquility</p>
+        </div>
+    </section>
+    <section></section>
+
+    <!-- About Section -->
+    <section class="about top" id="about">
+        <div class="container flex">
+            <div class="left">
+                <div class="img">
+                    <img src="image/a1.jpg" alt="" class="image1">
+                    <img src="image/a2.jpg" alt="" class="image2">
+                </div>
+            </div>
+            <div class="right mt-4">
+                <div class="heading">
+                    <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+                    <h2>Welcome to Luviana Hotel Resort</h2>
+                    <p>"Experience the ultimate stay at our Varkala resort, nestled near the breathtaking Varkala Cliff, offering serene ocean
+                    views and top-notch hospitality.",</p>
+                    <p>"Savor delicious cuisines at nearby restaurants while enjoying a peaceful retreat at our resort, a perfect getaway for
+                    travelers seeking comfort and adventure"
+                    </p>
+                    <button class="btn1 mb-4">READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper top">
+        <div class="container mb-4">
+            <div class="text mt-4">
+                <h2>Our Amenities</h2>
+                <p>" Relax and unwind in our luxurious pool, surrounded by nature’s beauty, with easy access to Varkala’s famous beaches and
+                vibrant local culture "
+                 </p>
+    
+                <div class="content">
+                    <div class="box flex">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Swimming pool</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gym & yogo</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-spa"></i>
+                        <span>Spa & massage</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-ship"></i>
+                        <span>Boat Tours</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-swimmer"></i>
+                        <span>Surfing Lessons</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-microphone"></i>
+                        <span>Conference room</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-water"></i>
+                        <span>Diving & smorking</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>Private Beach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="room top" id="room">
+        <div class="container ">
+            <div class="heading_top flex1 ">
+                <div class="heading mt-4">
+                    <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+                    <h2>Rooms & Suites</h2>
+                </div>
+                <div class="button mt-5">
+                    <a href="room.html" class="btn1  px-4 py-2 rounded-lg shadow-lg">VIEW</a>
+                </div>
+            </div>
+    
+            <div class="content grid">
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Superior Soble Rooms</h3>
+                        <p><span>$</span>129 <span>/per night</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r2.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Deluxe Rooms</h3>
+                        <p><span>$</span>149 <span>/per night</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r3.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Premium Suites</h3>
+                        <p><span>$</span>179 <span>/per night</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper wrapper2 top">
+        <div class="container">
+            <div class="text">
+                <div class="heading">
+                    <h5>AT THE HEART OF COMMUNICATION</h5>
+                    <h2>People Say</h2>
+                </div>
+    
+                <div class="para">
+                    <p>This resort is a hidden gem! The stunning views, tranquil ambiance, and exceptional service made our stay unforgettable.
+                    Highly recommend it for a peaceful getaway. </p>
+    
+                    <div class="box flex">
+                        <div class="img">
+                            <img src="image/c.jpg" alt="">
+                        </div>
+                        <div class="name">
+                            <h5>KATE PALMER</h5>
+                            <h5>IDAHO</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+  
+    
+
+    <!-- Contact Section (Footer) -->
+
+    <footer id="contact" class="bg-gray-900 text-white text-center p-8 mt-24">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <!-- Contact Info -->
+            <div class="text-left">
+                <h2 class="text-lg font-semibold">Contact Us</h2>
+                <p class="mt-2">
+                    <a href="tel:+919061403046" class="flex items-center space-x-2 hover:text-blue-400">
+                        <i class="bi bi-telephone-fill"></i> <span>+91 9061403046</span>
+                    </a>
+                    <a href="tel:+917561807765" class="flex items-center space-x-2 hover:text-blue-400">
+                        <i class="bi bi-telephone-fill"></i> <span>+91 7561807765</span>
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:swargamresort@gmail.com" class="flex items-center space-x-2 hover:text-blue-400">
+                        <i class="bi bi-envelope-fill"></i> <span>swargamresort@gmail.com</span>
+                    </a>
+                </p>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.instagram.com/swargam_pool_resort_varkala?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:text-pink-500">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1DXvkx9FQ5/" target="_blank" class="hover:text-blue-500">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://wa.me/917561807765" target="_blank" class="hover:text-green-500">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="https://maps.app.goo.gl/5G6LMLoX6FJB6u8y7" target="_blank" class="hover:text-red-500">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </a>
+            </div>
+        </div>
+    
+        <p class="text-gray-400 text-sm mt-6">&copy; 2024 Swargam Pool Resort. All Rights Reserved.</p>
+    </footer>
+
+
+
+    <script>
+        function openModal() {
+            document.getElementById("roomModal").classList.remove("hidden");
+        }
+        function closeModal() {
+            document.getElementById("roomModal").classList.add("hidden");
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const roomDetails = [
+                {
+                    name: "Superior Soble Rooms",
+                    price: "$129 / per night",
+                    description: "A luxurious room with stunning views and top-notch amenities."
+                },
+                {
+                    name: "Deluxe Suite",
+                    price: "$150 / per night",
+                    description: "A spacious suite offering a panoramic view of the ocean."
+                },
+                {
+                    name: "Oceanview Room",
+                    price: "$110 / per night",
+                    description: "A comfortable room with a direct view of the ocean."
+                }
+            ];
+
+            const roomDetailsContainer = document.getElementById("roomDetails");
+
+            roomDetails.forEach(room => {
+                const roomCard = `
+                    <div class="room-card mb-4">
+                        <h4>${room.name}</h4>
+                        <p><strong>Price:</strong> ${room.price}</p>
+                        <p><strong>Description:</strong> ${room.description}</p>
+                    </div>
+                `;
+                roomDetailsContainer.innerHTML += roomCard;
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+                const cards = document.querySelectorAll('.card');
+                let currentCardIndex = 1;
+
+                setInterval(() => {
+                    // Move center card to right and right card to left
+                    const leftCard = cards[(currentCardIndex + 1) % cards.length];
+                    const centerCard = cards[currentCardIndex];
+                    const rightCard = cards[(currentCardIndex + 2) % cards.length];
+
+                    leftCard.classList.remove('left');
+                    leftCard.classList.add('center');
+
+                    centerCard.classList.remove('center');
+                    centerCard.classList.add('right');
+
+                    rightCard.classList.remove('right');
+                    rightCard.classList.add('left');
+
+                    currentCardIndex = (currentCardIndex + 1) % cards.length;
+                }, 3000);  // Change every 3 seconds
+            });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            // Toggle mobile menu
+            document.getElementById("menu-btn").addEventListener("click", function () {
+                document.getElementById("mobile-menu").classList.toggle("hidden");
+            });
+        </script>
+
+</body>
+
+</html>
